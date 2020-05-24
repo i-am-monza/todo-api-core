@@ -42,7 +42,7 @@ namespace TodoApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTodoItem(long id, TodoItemDTO todoItemDTO)
+        public async Task<ActionResult<TodoItemDTO>> UpdateTodoItem(long id, TodoItemDTO todoItemDTO)
         {
             if (id != todoItemDTO.Id)
             {
@@ -61,13 +61,13 @@ namespace TodoApi.Controllers
             try
             {
                 await _context.SaveChangesAsync();
+
+                return ItemToDTO(todoItem);
             }
             catch (DbUpdateConcurrencyException) when (!TodoItemExists(id))
             {
                 return NotFound();
             }
-
-            return NoContent();
         }
 
         [HttpPost]
