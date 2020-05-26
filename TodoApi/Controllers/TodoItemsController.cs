@@ -100,7 +100,14 @@ namespace TodoApi.Controllers
             }
 
             _context.TodoItems.Remove(todoItem);
-            await _context.SaveChangesAsync();
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch
+            {
+                throw new UnableToSaveItemException(todoItem.Name);
+            }
 
             return NoContent();
         }
