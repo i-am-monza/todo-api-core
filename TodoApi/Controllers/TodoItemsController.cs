@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TodoApi.Models;
@@ -86,15 +84,12 @@ namespace TodoApi.Controllers
             try
             {
                 await _context.SaveChangesAsync();
+
+                return ItemToDTO(todoItem);
             } catch
             {
                 throw new UnableToSaveItemException(todoItem.Name);
             }    
-
-            return CreatedAtAction(
-                nameof(GetTodoItem),
-                new { id = todoItem.Id },
-                ItemToDTO(todoItem));
         }
 
         [HttpDelete("{id}")]
@@ -111,24 +106,14 @@ namespace TodoApi.Controllers
             try
             {
                 await _context.SaveChangesAsync();
+
+                return ItemToDTO(todoItem);
             }
             catch
             {
                 throw new UnableToSaveItemException(todoItem.Name);
             }
-
-            try
-            {
-                await _context.SaveChangesAsync();
-                return ItemToDTO(todoItem);
-            } catch (Exception e)
-            {
-                throw e;
-            }
         }
-
-        private bool TodoItemExists(long id) =>
-             _context.TodoItems.Any(e => e.Id == id);
 
         private static TodoItemDTO ItemToDTO(TodoItem todoItem) =>
             new TodoItemDTO
