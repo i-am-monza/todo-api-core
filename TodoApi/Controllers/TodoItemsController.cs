@@ -82,7 +82,14 @@ namespace TodoApi.Controllers
             };
 
             _context.TodoItems.Add(todoItem);
-            await _context.SaveChangesAsync();
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            } catch
+            {
+                throw new UnableToSaveItemException(todoItem.Name);
+            }    
 
             return CreatedAtAction(
                 nameof(GetTodoItem),
