@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TodoApi.Models;
+using TodoApi.Exceptions;
 
 namespace TodoApi.Controllers
 {
@@ -43,8 +44,9 @@ namespace TodoApi.Controllers
 
         [HttpPut("{id}")]
         public async Task<ActionResult<TodoItemDTO>> UpdateTodoItem(long id, TodoItemDTO todoItemDTO)
+
         {
-            if (id != todoItemDTO.Id)
+            if(id != todoItemDTO.Id)
             {
                 return BadRequest();
             }
@@ -64,9 +66,9 @@ namespace TodoApi.Controllers
 
                 return ItemToDTO(todoItem);
             }
-            catch (DbUpdateConcurrencyException) when (!TodoItemExists(id))
+            catch
             {
-                return NotFound();
+                throw new UnableToSaveItemException(todoItem.Name);
             }
         }
 
