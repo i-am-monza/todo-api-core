@@ -9610,11 +9610,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Work\\Software projects\\TodoApi\\TodoItemsControllerTest\\TodoItemsUnitTest.csproj",
-      "projectName": "TodoItemsUnitTest",
-      "projectPath": "G:\\Work\\Software projects\\TodoApi\\TodoItemsControllerTest\\TodoItemsUnitTest.csproj",
+      "projectUniqueName": "G:\\Software projects\\TodoApi\\TodoItemsControllerTest\\TodoItemsControllerTest.csproj",
+      "projectName": "TodoItemsControllerTest",
+      "projectPath": "G:\\Software projects\\TodoApi\\TodoItemsControllerTest\\TodoItemsControllerTest.csproj",
       "packagesPath": "C:\\Users\\Monwabisid\\.nuget\\packages\\",
-      "outputPath": "G:\\Work\\Software projects\\TodoApi\\TodoItemsControllerTest\\obj\\",
+      "outputPath": "G:\\Software projects\\TodoApi\\TodoItemsControllerTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Monwabisid\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9630,8 +9630,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "G:\\Work\\Software projects\\TodoApi\\TodoApi\\TodoApi.csproj": {
-              "projectPath": "G:\\Work\\Software projects\\TodoApi\\TodoApi\\TodoApi.csproj"
+            "G:\\Software projects\\TodoApi\\TodoApi\\TodoApi.csproj": {
+              "projectPath": "G:\\Software projects\\TodoApi\\TodoApi\\TodoApi.csproj"
             }
           }
         }
