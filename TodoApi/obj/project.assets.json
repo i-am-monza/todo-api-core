@@ -8622,11 +8622,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Work\\Software projects\\TodoApi\\TodoApi\\TodoApi.csproj",
+      "projectUniqueName": "G:\\Software projects\\TodoApi\\TodoApi\\TodoApi.csproj",
       "projectName": "TodoApi",
-      "projectPath": "G:\\Work\\Software projects\\TodoApi\\TodoApi\\TodoApi.csproj",
+      "projectPath": "G:\\Software projects\\TodoApi\\TodoApi\\TodoApi.csproj",
       "packagesPath": "C:\\Users\\Monwabisid\\.nuget\\packages\\",
-      "outputPath": "G:\\Work\\Software projects\\TodoApi\\TodoApi\\obj\\",
+      "outputPath": "G:\\Software projects\\TodoApi\\TodoApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Monwabisid\\AppData\\Roaming\\NuGet\\NuGet.Config",
