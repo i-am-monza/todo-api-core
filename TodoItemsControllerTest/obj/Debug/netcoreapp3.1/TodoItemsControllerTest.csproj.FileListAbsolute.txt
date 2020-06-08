@@ -221,3 +221,9 @@ G:\Software projects\TodoApi\TodoItemsControllerTest\obj\Debug\netcoreapp3.1\Tod
 G:\Software projects\TodoApi\TodoItemsControllerTest\obj\Debug\netcoreapp3.1\TodoItemsControllerTest.AssemblyInfo.cs
 G:\Software projects\TodoApi\TodoItemsControllerTest\obj\Debug\netcoreapp3.1\TodoItemsControllerTest.csproj.CopyComplete
 G:\Software projects\TodoApi\TodoItemsControllerTest\obj\Debug\netcoreapp3.1\TodoItemsControllerTest.genruntimeconfig.cache
+G:\Software projects\TodoApi\TodoItemsControllerTest\bin\Debug\netcoreapp3.1\TodoItemsControllerTest.pdb
+G:\Software projects\TodoApi\TodoItemsControllerTest\bin\Debug\netcoreapp3.1\Castle.Core.dll
+G:\Software projects\TodoApi\TodoItemsControllerTest\bin\Debug\netcoreapp3.1\Moq.dll
+G:\Software projects\TodoApi\TodoItemsControllerTest\obj\Debug\netcoreapp3.1\TodoItemsControllerTest.csproj.CoreCompileInputs.cache
+G:\Software projects\TodoApi\TodoItemsControllerTest\obj\Debug\netcoreapp3.1\TodoItemsControllerTest.dll
+G:\Software projects\TodoApi\TodoItemsControllerTest\obj\Debug\netcoreapp3.1\TodoItemsControllerTest.pdb

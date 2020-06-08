@@ -3095,7 +3095,7 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "TodoApi/1.0.0": {
+      "Todo.API/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
@@ -3106,10 +3106,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.3"
         },
         "compile": {
-          "bin/placeholder/TodoApi.dll": {}
+          "bin/placeholder/Todo.API.dll": {}
         },
         "runtime": {
-          "bin/placeholder/TodoApi.dll": {}
+          "bin/placeholder/Todo.API.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -9588,17 +9588,17 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "TodoApi/1.0.0": {
+    "Todo.API/1.0.0": {
       "type": "project",
-      "path": "../TodoApi/TodoApi.csproj",
-      "msbuildProject": "../TodoApi/TodoApi.csproj"
+      "path": "../TodoApi/Todo.API.csproj",
+      "msbuildProject": "../TodoApi/Todo.API.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "Moq >= 4.14.1",
-      "TodoApi >= 1.0.0",
+      "Todo.API >= 1.0.0",
       "coverlet.collector >= 1.2.0",
       "xunit >= 2.4.0",
       "xunit.runner.visualstudio >= 2.4.0"
@@ -9630,8 +9630,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "G:\\Software projects\\TodoApi\\TodoApi\\TodoApi.csproj": {
-              "projectPath": "G:\\Software projects\\TodoApi\\TodoApi\\TodoApi.csproj"
+            "G:\\Software projects\\TodoApi\\TodoApi\\Todo.API.csproj": {
+              "projectPath": "G:\\Software projects\\TodoApi\\TodoApi\\Todo.API.csproj"
             }
           }
         }

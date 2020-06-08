@@ -8622,9 +8622,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Software projects\\TodoApi\\TodoApi\\TodoApi.csproj",
-      "projectName": "TodoApi",
-      "projectPath": "G:\\Software projects\\TodoApi\\TodoApi\\TodoApi.csproj",
+      "projectUniqueName": "G:\\Software projects\\TodoApi\\TodoApi\\Todo.API.csproj",
+      "projectName": "Todo.API",
+      "projectPath": "G:\\Software projects\\TodoApi\\TodoApi\\Todo.API.csproj",
       "packagesPath": "C:\\Users\\Monwabisid\\.nuget\\packages\\",
       "outputPath": "G:\\Software projects\\TodoApi\\TodoApi\\obj\\",
       "projectStyle": "PackageReference",
