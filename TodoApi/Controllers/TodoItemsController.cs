@@ -10,7 +10,7 @@ namespace TodoApi.Controllers
 {
     [Route("api/TodoItems")]
     [ApiController]
-    public class TodoItemsController : ControllerBase
+    public class TodoItemsController : ITodoItemsController
     {
         private readonly TodoContext _context;
 
@@ -20,7 +20,7 @@ namespace TodoApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TodoItemDTO>>> GetTodoItems()
+        public async Task<List<TodoItemDTO>> GetTodoItems()
         {
             return await _context.TodoItems
                 .Select(x => ItemToDTO(x))
@@ -28,32 +28,27 @@ namespace TodoApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<TodoItemDTO>> GetTodoItem(long id)
+        public async Task<TodoItemDTO> GetTodoItem(long id)
         {
             var todoItem = await _context.TodoItems.FindAsync(id);
-
-            if (todoItem == null)
-            {
-                return NotFound();
-            }
 
             return ItemToDTO(todoItem);
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<TodoItemDTO>> UpdateTodoItem(long id, TodoItemDTO todoItemDTO)
+        public async Task<TodoItemDTO> UpdateTodoItem(long id, TodoItemDTO todoItemDTO)
 
         {
-            if(id != todoItemDTO.Id)
-            {
-                return BadRequest();
-            }
+            //if(id != todoItemDTO.Id)
+            //{
+            //    return BadRequest();
+            //}
 
             var todoItem = await _context.TodoItems.FindAsync(id);
-            if (todoItem == null)
-            {
-                return NotFound();
-            }
+            //if (todoItem == null)
+            //{
+            //    return NotFound();
+            //}
 
             todoItem.Name = todoItemDTO.Name;
             todoItem.IsComplete = todoItemDTO.IsComplete;
@@ -71,7 +66,7 @@ namespace TodoApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<TodoItemDTO>> CreateTodoItem(TodoItemDTO todoItemDTO)
+        public async Task<TodoItemDTO> CreateTodoItem(TodoItemDTO todoItemDTO)
         {
             var todoItem = new TodoItem
             {
@@ -93,14 +88,14 @@ namespace TodoApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<TodoItemDTO>> DeleteTodoItem(long id)
+        public async Task<TodoItemDTO> DeleteTodoItem(long id)
         {
             var todoItem = await _context.TodoItems.FindAsync(id);
 
-            if (todoItem == null)
-            {
-                return NotFound();
-            }
+            //if (todoItem == null)
+            //{
+            //    return NotFound();
+            //}
 
             _context.TodoItems.Remove(todoItem);
             try

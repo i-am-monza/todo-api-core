@@ -10,14 +10,14 @@ namespace TodoApi.Controllers
 {
     public interface ITodoItemsController
     {
-        public Task<ActionResult<IEnumerable<TodoItemDTO>>> GetTodoItems();
+        public Task<List<TodoItemDTO>> GetTodoItems();
 
-        public Task<ActionResult<TodoItemDTO>> GetTodoItem(long id);
+        public Task<TodoItemDTO> GetTodoItem(long id);
 
-        public Task<ActionResult<TodoItemDTO>> UpdateTodoItem(long id, TodoItemDTO todoItemDTO);
+        public Task<TodoItemDTO> UpdateTodoItem(long id, TodoItemDTO todoItemDTO);
 
-        public Task<ActionResult<TodoItemDTO>> CreateTodoItem(TodoItemDTO todoItemDTO);
+        public Task<TodoItemDTO> CreateTodoItem(TodoItemDTO todoItemDTO);
 
-        public Task<ActionResult<TodoItemDTO>> DeleteTodoItem(long id);
+        public Task<TodoItemDTO> DeleteTodoItem(long id);
     }
 }
